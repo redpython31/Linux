@@ -4,7 +4,7 @@ using namespace std;
 //Declare all function.
 
     void sum();  
-    float subtract(float value1, float value2);
+    void Subtract();
     float multiply(float value1, float value2);
     float divide(float value1, float value2);
     int fibonacci(int num);
@@ -59,6 +59,7 @@ using namespace std;
                         break;
 
                 case 2: cout<<"You are on Subtraction page.";
+                        Subtract();
                         break;
 
                 case 3: cout<<"You are on Multiply page.";
@@ -114,4 +115,24 @@ using namespace std;
 
         return;
     }
+    }
+
+    //Subtract function.
+
+    void Subtract() {
+
+        cout <<"Note:- If you want to exit press ctrl + c \n";
+        float result = 0;
+
+        do {
+                float userInput;
+
+                cout <<"Enter number: ";
+                cin >>userInput;
+
+                result -= userInput;
+
+                cout <<"Subtraction is: "<<result<<endl;
+
+        }while(1);
     }
