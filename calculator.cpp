@@ -48,7 +48,7 @@ using namespace std;
 
                 case 1: cout<<"\nYou are on Addition page.\n";
                         
-                        void sum();
+                        sum();
                        /* float addInput = 0;
 
                         cout <<"Enter Input: ";
@@ -94,25 +94,30 @@ using namespace std;
     void sum() {
 
         float result = 0;
-        bool abort = true;
-        char choice ;
+       bool abort = true;
 
+        cout <<"NOTE:- If you want to exit this program type ctrl + c \n";
         while(abort) {
 
-        float addNum;
+            float userInput = 0;
 
-        cout <<"Enter number to add: ";
-        cin >>addNum;
+            cout <<"Enter number: ";
+            cin >>userInput;
 
-        result += addNum;
+            //Validating
+            if (userInput > 0 || userInput < 0){
+                
+                result += userInput;
 
-        /*if (choice == '\n') {
+                cout<<"Sum is: " <<result <<endl;
 
-            abort = false;
-        }*/
-
-        cout <<"Answer is: " <<result <<endl;
-
+            }else{
+                cout<<"Invalid input! Only number allowed.\n";
+                abort = false;
+                break;
+            }
+        }
+        cout <<"Total sum is: " <<result <<endl;
         return;
     }
     }
